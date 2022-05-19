@@ -17,7 +17,7 @@ public class Application {
 
     public static void main(String[] args) {
 
-        PostingUtils.mostrarPostings();
+        PostingUtils.showPostings();
 
         System.out.println("\n######################################\n");
 
@@ -25,7 +25,11 @@ public class Application {
 
         System.out.println("\n######################################\n");
 
-        PostingUtils.mostrarFilterSellApartment(RealestateTypeEnum.HOUSE, OperationTypeEnum.RENT);
+        PostingUtils.showByRealEstateTypeAndOperationType(RealestateTypeEnum.APARTMENT, OperationTypeEnum.SELL);
+
+        System.out.println("\n######################################\n");
+
+        PostingUtils.showByRealEstateTypeAndOperationType(RealestateTypeEnum.HOUSE, OperationTypeEnum.RENT);
 
     }
 }

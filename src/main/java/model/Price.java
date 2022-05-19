@@ -12,6 +12,22 @@ public class Price {
         this.currency = currency;
     }
 
+    public long getAmount() {
+        return amount;
+    }
+
+    public void setAmount(long amount) {
+        this.amount = amount;
+    }
+
+    public CurrencyEnum getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(CurrencyEnum currency) {
+        this.currency = currency;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

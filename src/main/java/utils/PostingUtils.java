@@ -40,19 +40,19 @@ public class PostingUtils {
         return postingsToRemove;
     }
 
-    public static void mostrarPostings() {
-        Collection<Posting> postingList =  PostingUtils.getPostings();
-        postingList.forEach(x -> System.out.println(x.toString()));
+    public static void showPostings() {
+        Collection<Posting> postingList = getPostings();
+        postingList.forEach(System.out::println);
     }
 
     public static void postingRemove(){
         Collection<Posting> postings = PostingUtils.getPostings();
-        Collection<Posting> postingsToRemove = PostingUtils.getPostingsToRemove();
+        Collection<Posting> postingsToRemove = getPostingsToRemove();
         postings.removeAll(postingsToRemove);
-        postings.forEach(x -> System.out.println(x.toString()));
+        postings.forEach(System.out::println);
     }
 
-    public static void mostrarFilterSellApartment(RealestateTypeEnum rte, OperationTypeEnum ote){
+    public static void showByRealEstateTypeAndOperationType(RealestateTypeEnum rte, OperationTypeEnum ote){
         Collection<Posting> postingslist = getPostings();
         Collection<Posting> filterList = new ArrayList<>();
 
@@ -62,6 +62,6 @@ public class PostingUtils {
                 filterList.add(p);
             }
         }
-        filterList.forEach(x -> System.out.println(x.toString()));
+        filterList.forEach(System.out::println);
     }
 }
